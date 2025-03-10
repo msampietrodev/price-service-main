@@ -8,8 +8,8 @@ Esta aplicación es una API RESTful desarrollada en **Spring Boot con WebFlux** 
 ## Tecnologías Utilizadas
 - **Java 21**
 - **Spring Boot 3.4.0-SNAPSHOT** (WebFlux, R2DBC)
-- **Reactor-resilience4j
-- **H2** (Base de datos en memoria, R2DBC)
+- **Reactor-resilience4j**
+- **H2** (Base de datos en mem**oria, R2DBC)
 - **Lombok** (Reducción de boilerplate code)
 - **MapStruct** (Conversión de DTOs)
 - **JWT** (Autenticación)
@@ -73,3 +73,9 @@ Se utilizan diferentes códigos HTTP según el caso:
   - `test: Agrega pruebas de integración`
 - **Linter:** Análisis con **SonarQube** para evitar alertas.
 - **CI/CD:** Se puede configurar con **GitHub Actions** para integración y despliegue automático.
+
+  ## Futuras Mejoras
+  - Organizar dependencias en cada modulo
+  - Pruebas unitarias 100%
+  - configurar DockerFile para despliegues
+  - Agregar Cache ( @Cacheable(value = "prices", key = "#productId + '_' + #brandId + '_' + #applicationDate"))
