@@ -8,6 +8,7 @@ Esta aplicación es una API RESTful desarrollada en **Spring Boot con WebFlux** 
 ## Tecnologías Utilizadas
 - **Java 21**
 - **Spring Boot 3.4.0-SNAPSHOT** (WebFlux, R2DBC)
+- **Reactor-resilience4j
 - **H2** (Base de datos en memoria, R2DBC)
 - **Lombok** (Reducción de boilerplate code)
 - **MapStruct** (Conversión de DTOs)
