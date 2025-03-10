@@ -41,7 +41,7 @@ public class PriceControllerIntegrationTest {
                 .consumeWith(response -> {
                     PriceResponse body = response.getResponseBody();
                     assert body != null;
-                    assertEquals(BigDecimal.valueOf(35.50).setScale(2, RoundingMode.HALF_UP), body.getPrice().setScale(2, RoundingMode.HALF_UP));
+                    assertEquals(BigDecimal.valueOf(35.50).setScale(2, RoundingMode.HALF_UP), body.price().setScale(2, RoundingMode.HALF_UP));
                 });
     }
 
@@ -61,7 +61,7 @@ public class PriceControllerIntegrationTest {
                 .consumeWith(response -> {
                     PriceResponse body = response.getResponseBody();
                     assert body != null;
-                    assertEquals(BigDecimal.valueOf(25.45).setScale(2, RoundingMode.HALF_UP), body.getPrice().setScale(2, RoundingMode.HALF_UP));
+                    assertEquals(BigDecimal.valueOf(25.45).setScale(2, RoundingMode.HALF_UP), body.price().setScale(2, RoundingMode.HALF_UP));
                 });
     }
 
@@ -81,7 +81,7 @@ public class PriceControllerIntegrationTest {
                 .consumeWith(response -> {
                     PriceResponse body = response.getResponseBody();
                     assert body != null;
-                    assertEquals(BigDecimal.valueOf(35.50).setScale(2, RoundingMode.HALF_UP), body.getPrice().setScale(2, RoundingMode.HALF_UP));
+                    assertEquals(BigDecimal.valueOf(35.50).setScale(2, RoundingMode.HALF_UP), body.price().setScale(2, RoundingMode.HALF_UP));
                 });
     }
 
@@ -101,7 +101,7 @@ public class PriceControllerIntegrationTest {
                 .consumeWith(response -> {
                     PriceResponse body = response.getResponseBody();
                     assert body != null;
-                    assertEquals(BigDecimal.valueOf(30.50).setScale(2, RoundingMode.HALF_UP), body.getPrice().setScale(2, RoundingMode.HALF_UP));
+                    assertEquals(BigDecimal.valueOf(30.50).setScale(2, RoundingMode.HALF_UP), body.price().setScale(2, RoundingMode.HALF_UP));
                 });
     }
 
@@ -121,7 +121,7 @@ public class PriceControllerIntegrationTest {
                 .consumeWith(response -> {
                     PriceResponse body = response.getResponseBody();
                     assert body != null;
-                    assertEquals(BigDecimal.valueOf(38.95).setScale(2, RoundingMode.HALF_UP), body.getPrice().setScale(2, RoundingMode.HALF_UP));
+                    assertEquals(BigDecimal.valueOf(38.95).setScale(2, RoundingMode.HALF_UP), body.price().setScale(2, RoundingMode.HALF_UP));
                 });
     }
 }

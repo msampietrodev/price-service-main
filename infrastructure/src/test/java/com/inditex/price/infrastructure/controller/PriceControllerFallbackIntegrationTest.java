@@ -63,7 +63,7 @@ public class PriceControllerFallbackIntegrationTest {
         .consumeWith(response -> {
             ApiError apiError = response.getResponseBody();
             assert apiError != null;
-            assertEquals("Price service is currently unavailable", apiError.getErrors().getFirst());
+            assertEquals("Price service is currently unavailable", apiError.errors().getFirst());
         });
     }
     

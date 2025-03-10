@@ -25,8 +25,8 @@ public class PriceService {
 		ReactiveCircuitBreaker circuitBreaker = reactiveCircuitBreakerFactory.create("priceService");
 
 		return circuitBreaker.run(
-				priceRepository.findSelectPrice(priceRequest.getProductId(), priceRequest.getBrandId(),
-						priceRequest.getApplicationDate()).map(PriceMapper.INSTANCE::toPriceResponse),
+				priceRepository.findSelectPrice(priceRequest.productId(), priceRequest.brandId(),
+						priceRequest.applicationDate()).map(PriceMapper.INSTANCE::toPriceResponse),
 				throwable -> getPriceFallback(priceRequest, throwable));
 	}
 

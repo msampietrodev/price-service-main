@@ -5,22 +5,12 @@ import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class PriceResponse {
-
-    private Long brandId;
-    private Long productId;
-    private Integer priceList;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime startDate;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime endDate;
-    private BigDecimal price;
-    private String currency;
-}
+public record PriceResponse(
+    Long brandId,
+    Long productId,
+    Integer priceList,
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") LocalDateTime startDate,
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") LocalDateTime endDate,
+    BigDecimal price,
+    String currency
+) {}
