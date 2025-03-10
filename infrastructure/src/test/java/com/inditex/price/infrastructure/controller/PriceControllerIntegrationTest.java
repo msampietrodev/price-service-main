@@ -1,29 +1,20 @@
 package com.inditex.price.infrastructure.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.when;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import com.inditex.price.application.dto.PriceResponse;
-import com.inditex.price.application.exception.ApiError;
-import com.inditex.price.domain.repository.PriceRepository;
-
-import reactor.core.publisher.Mono;
 
 @SpringBootTest
 @AutoConfigureWebTestClient
